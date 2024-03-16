@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShop</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="container">
+        
+                <nav class="menu">
+                    <h3 class="menu__title">BookShop</h3>
+        
+                    <form class="menu__search">
+                        <input class="menu__search-input" type="text" placeholder="Поиск по названию, автору">
+                        <button class="menu__search-btn" type="submit">
+                            <img class="menu_search-icon" src="img/icons/search-icon.svg" alt="search-icon">
+                        </button>
+                    </form>
+                    <div class="menu__box">
+                        <div class="menu__info">
+                            <a class="menu__info-phone" href="tel:8xxxxxxxxxx">+7(xxx)xxx-xx-xx</a>
+
+                            <span class="menu__info-item">09:00-22:00 без выходных</span>
+                        </div>
+        
+        
+                        <div class="menu__location">
+                            <button class="menu__location-btn">
+                                <a class="menu__location-link" href="#">Москва</a>
+                            </button>
+        
+                            <div class="menu__location-content">
+                                <div class="menu__location-choice">
+                                    <input class="menu__location-input" type="text" spellcheck="false"
+                                        placeholder="Начните вводить">
+                                </div>
+        
+                                <ul class="menu__location-list options">
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <div class="menu__user">
+        
+                            <button class="menu__user-btn">
+                                <a class="menu__user-link" href="#">Войти</a>
+                            </button>
+        
+                            <div class="menu__user-list">
+                                <a class="menu__user-item">Личный кабинет</a>
+                                <a class="menu__user-item">Настройки</a>
+                                <a class="menu__user-item">Сообщения</a>
+                                <a class="menu__user-item">Избранное</a>
+                                <a class="menu__user-item">Мои заказы</a>
+                                <a class="menu__user-item">Выйти</a>
+                            </div>
+                        </div>
+        
+                        <button class="menu__cart">
+                            <a class="menu__cart-link" href="#">
+                                <span class="menu__cart-num">7</span>
+                                <div class="menu__cart-name">Корзина</div>
+                                <div class="menu__cart-money">7500р.</div>
+                            </a>
+                        </button>
+        
+                        <div class="window-cart window-cart--close">
+                            <button class="window-cart__close">
+                                <img class="window-cart__close-img" src="img/icons/close.svg" alt="close-img">
+                            </button>
+        
+                            <div class="window-cart__content">
+                                <div class="window-cart__content-info">
+                                    <a class="window-cart__img" href="#">
+                                        <img class="window-cart__img-mini" src="img/books/3.jpg" alt="mini-img">
+                                    </a>
+                                    <h4 class="window-cart__name">Пчеловодство в комиксах</h4>
+                                    <p class="window-cart__price">970р.</p>
+                                </div>
+        
+                                <div class="window-cart__total">
+                                    <p class="window-cart__title">Итого</p>
+                                    <p class="window-cart__cost">970р</p>
+                                </div>
+                                <button class="window-cart__btn">Перейти в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+        
+                <nav class="category">
+                    <div class="category__list">
+                        <div class="category__list-item">
+                            <button class="category__list-all category__list-link dropbtn">
+                                <span class="category__list-icon "></span>Все категории</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Художественная литература</a>
+                                <a class="category__list-point">Психология</a>
+                                <a class="category__list-point">Путешествия.Хобби.Досуг</a>
+                                <a class="category__list-point">Иностранная литература</a>
+                                <a class="category__list-point">Искусство</a>
+                                <a class="category__list-point">Биографии и мемуары</a>
+                                <a class="category__list-point">Философия</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Электронные книги</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Классика</a>
+                                <a class="category__list-point">Детективы</a>
+                                <a class="category__list-point">Публицистика</a>
+                                <a class="category__list-point">История</a>
+                                <a class="category__list-point">Искусство</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Аудиокниги</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Электронные аудиокниги</a>
+                                <a class="category__list-point">CD-диски</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Коллекционные издания</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">История</a>
+                                <a class="category__list-point">Искусство</a>
+                                <a class="category__list-point">Энциклопедии</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Журналы</button>
+                        </div>
+                    </div>
+                </nav>
+        
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Бестселлеры</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="catalog">
+                <div class="container">
+
+                    <h1 class="catalog__title title">Бестселлеры</h1>
+                    <div class="catalog__fast-filters">
+                        <a class="catalog__fast-filters-item" href="#">Предзаказ</a>
+                        <a class="catalog__fast-filters-item" href="#">Бумажные книги</a>
+                        <a class="catalog__fast-filters-item" href="#">Новинки</a>
+                    </div>
+
+                    <div class="catalog__wrapper">
+
+                        <div class="catalog__filters">
+
+                            <div class="catalog__filters-blocks">
+                            <h4 class="catalog__filters-title">Тип товара</h4>
+                                <div class="catalog__filters-block">
+                                    <label class="catalog__filters-check">Твердый переплет
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Мягкая обложка
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Электронная книга
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="catalog__filters-blocks">
+                                
+                                <h4 class="catalog__filters-title filter">Цена</h4>
+                                <div class="catalog__filters-block">
+                                <div class="catalog__filters-lines price-input">
+                                    <div class="catalog__filters-range field">
+                                        <span class="catalog__filters-line">от</span>
+                                        <input type="number" class="input-min" value="250">
+                                    </div>
+                                    <div class="catalog__filters-range field">
+                                        <span class="catalog__filters-line">до</span>
+                                        <input type="number" class="input-max" value="7500">
+                                    </div>
+                                </div>
+                                <div class="catalog__filters-slider slider">
+                                    <div class="catalog__filters-progress progress"></div>
+                                </div>
+                                <div class="catalog__filters-rangeinp range-input">
+                                    <input type="range" class="range-min" min="0" max="10000" value="250" step="50">
+                                    <input type="range" class="range-max" min="0" max="10000" value="7500" step="50">
+                                </div>
+                                </div>
+                            </div>
+                            
+                            <div class="catalog__filters-blocks">
+                            <h4 class="catalog__filters-title">Издательство</h4>
+                                <div class="catalog__filters-block">
+                                    <label class="catalog__filters-check">АСТ
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Волчок
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Время
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Freedom
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Like Book
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+
+                                    <a class="catalog__filters-btn filter-btn" href="#">Еще 7 издательств</a>
+                                </div>
+                            </div>
+
+                            <div class="catalog__filters-blocks">
+                            <h4 class="catalog__filters-title">Категория</h4>
+                                <div class="catalog__filters-block">
+                                    <label class="catalog__filters-check">Аудиокниги
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Электронные книги
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Коллекционные издания
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    <label class="catalog__filters-check">Журналы
+                                        <input class="catalog__filters-input" type="checkbox" checked="checked">
+                                        <span class="catalog__filters-checkmark"></span>
+                                    </label>
+                                    
+                                    <a class="catalog__filters-btn filter-btn" href="#">Все 29 категорий</a>
+                                </div>
+                            </div>
+
+                            <div class="catalog__filters-blocks">
+                                <div class="catalog__filters-switch">
+                                    Только в наличии<label class="catalog__filters-switchlb">
+                                    <input class="catalog__filters-switchinp"  type="checkbox" checked>
+                                    <span class="catalog__filters-slide"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        
+                            <div class="catalog__filters-result">
+                                <div class="catalog__filters-resultname">Найдено 15 товаров</div>
+                                <div class="catalog__filters-resultclear"></div>
+                            </div>
+                        </div>
+
+                        <section class="catalog__content">
+                            <div class="catalog__settings">
+                                <div class="catalog__setting-filter">
+                                    <a class="catalog__settings-filterlink" href="#">Бестселлеры
+                                        <span class="catalog__settingsclose"></span>
+                                    </a>
+                                    <a class="catalog__settings-filterlink" href="#">АСТ
+                                        <span class="catalog__settingsclose"></span>
+                                    </a>
+                                    <a class="catalog__settings-filterlink" href="#">В наличии
+                                        <span class="catalog__settingsclose"></span>
+                                    </a>
+                                </div>
+                                <div class="catalog__settings-views">
+
+                                    <select class=" catalog__setting-viewsfilter">
+                                        <option class="catalog__settings-point">Сначала непопулярные</option>
+                                        <option class="catalog__settings-point">Сначала дорогие</option>
+                                        <option class="catalog__settings-point">Сначала недорогие</option>
+                                        <option class="catalog__settings-point" selected="selected">Сначала популярные</option>
+                                    </select>
+
+                                    <a class="catalog__setting-viewsnum">На странице <b>15</b></a>
+                                    <a class="catalog__setting-viewsline" id="line-view-style-button"></a>
+                                    <a class="catalog__setting-viewsblock active" id="block-view-style-button"></a>
+                                </div>
+                            </div>
+
+                            <div class="catalog__items" id="item-list-style">
+
+                                <div class="popular__item">
+                            
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/1.jpg" alt="book-img">
+                                    </a>
+                            
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Живи красиво. Интерьер мечты от идеи до воплощения</a>
+                                        </div>
+                            
+                                        <p class="popular__item-price">1000р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="popular__item">
+                            
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/2.jpg" alt="book-img">
+                                    </a>
+                            
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Унесенные ветром. Том 1</a>
+                                        </div>
+                            
+                                        <p class="popular__item-price">749р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                            
+                                <div class="popular__item">
+                            
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/3.jpg" alt="book-img">
+                                    </a>
+                            
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Пчеловодство в комиксах</a>
+                                        </div>
+                            
+                                        <p class="popular__item-price">970р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                            
+                                <div class="popular__item">
+                            
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/4.jpg" alt="book-img">
+                                    </a>
+                            
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Спокойствие. Стоицизм – путь мудреца</a>
+                                        </div>
+                            
+                                        <p class="popular__item-price">329р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                            
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/1.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Живи красиво. Интерьер мечты от идеи до воплощения</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">1000р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/2.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Унесенные ветром. Том 1</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">749р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/3.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Пчеловодство в комиксах</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">970р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/4.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Спокойствие. Стоицизм – путь мудреца</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">329р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/1.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Живи красиво. Интерьер мечты от идеи до воплощения</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">1000р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/2.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Унесенные ветром. Том 1</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">749р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/3.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Пчеловодство в комиксах</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">970р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/4.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Спокойствие. Стоицизм – путь мудреца</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">329р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/1.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Живи красиво. Интерьер мечты от идеи до воплощения</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">1000р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/2.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Унесенные ветром. Том 1</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">749р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="popular__item">
+                                
+                                    <a class="popular__item-link">
+                                        <img class="popular__item-img" src="img/books/3.jpg" alt="book-img">
+                                    </a>
+                                
+                                    <div class="popular__item-info">
+                                        <div class="popular__item-names">
+                                            <a class="popular__item-name">Пчеловодство в комиксах</a>
+                                        </div>
+                                
+                                        <p class="popular__item-price">970р.</p>
+                                        <div class="popular__item-select">
+                                            <div class="popular__item-heart">
+                                                <span class="popular__item-text">В избранное</span>
+                                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                            </div>
+                                            <button class="popular__item-btn">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="catalog__items-more">
+                                <a class="catalog__items-morelink" href="#">Показать еще 10 товаров</a>
+                            </div>
+                            <div class="catalog__items-navigation">
+                                <span class="catalog__items-navigationcur">1</span>
+                                <a class="catalog__items-navigationlist" href="#">2</a>
+                                <a class="catalog__items-navigationlist" href="#">3</a>
+                                <a class="catalog__items-navigationlist" href="#">4</a>
+                                <span class="catalog__items-navigationnext">...</span>
+                                <a class="catalog__items-navigationlist" href="#">9</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+
+            <div class="footer__info">
+
+                <a class="footer__logo-link" href="#">BookShop</a>
+
+                <div class="footer__phone">
+                    <a class="footer__phone-link" href="tel:8xxxxxxxxxx">+7(xxx)xxx-xx-xx</a>
+                </div>
+
+                <div class="footer__social">
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <img class="footer__social-img" src="img/icons/telegram.svg" alt="telegram-icon">
+                    </a>
+
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <img class="footer__social-img" src="img/icons/vk.svg" alt="vk-icon">
+                    </a>
+
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <img class="footer__social-img" src="img/icons/facebook.svg" alt="facebook-icon">
+                    </a>
+
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <img class="footer__social-img" src="img/icons/instagram.svg" alt="instagram-icon">
+                    </a>
+
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <img class="footer__social-img" src="img/icons/whatsapp.svg" alt="facebook-icon">
+                    </a>
+
+                    <a class="footer__social-link" href="#" target="_blank">
+                        <img class="footer__social-img" src="img/icons/youtube.svg" alt="twitter-icon">
+                    </a>
+                </div>
+
+                <div class="footer__address"> 111222, г. Москва, проезд Улицаулица, дом x, корпус x</div>
+            </div>
+
+            <ul class="footer__nav">
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Как оформить заказ
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Оплата
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Доставка
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Обмен и возврат товара
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Отзывы о нас
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Контакты
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">О компании
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Наши партнеры
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Вакансии
+                    </a>
+                </li>
+                <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="#">Пользовательское соглашение
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer__copyright">
+        <div class="container">
+            <p class="footer__copyright-text">© 2022. «BookShop»</p>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/main.min.js"></script>
+
+
+</body>
+</html>

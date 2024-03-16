@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShop</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="container">
+        
+                <nav class="menu">
+                    <h3 class="menu__title">BookShop</h3>
+        
+                    <form class="menu__search">
+                        <input class="menu__search-input" type="text" placeholder="Поиск по названию, автору">
+                        <button class="menu__search-btn" type="submit">
+                            <img class="menu_search-icon" src="img/icons/search-icon.svg" alt="search-icon">
+                        </button>
+                    </form>
+                    <div class="menu__box">
+                        <div class="menu__info">
+                            <a class="menu__info-phone" href="tel:8xxxxxxxxxx">+7(xxx)xxx-xx-xx</a>
+                            <span class="menu__info-item">09:00-22:00 без выходных</span>
+                        </div>
+        
+        
+                        <div class="menu__location">
+                            <button class="menu__location-btn">
+                                <a class="menu__location-link" href="#">Москва</a>
+                            </button>
+        
+                            <div class="menu__location-content">
+                                <div class="menu__location-choice">
+                                    <input class="menu__location-input" type="text" spellcheck="false"
+                                        placeholder="Начните вводить">
+                                </div>
+        
+                                <ul class="menu__location-list options">
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="menu__user">
+        
+                            <button class="menu__user-btn">
+                                <a class="menu__user-link" href="#">Войти</a>
+                            </button>
+        
+                            <div class="menu__user-list">
+                                <a class="menu__user-item">Личный кабинет</a>
+                                <a class="menu__user-item">Настройки</a>
+                                <a class="menu__user-item">Сообщения</a>
+                                <a class="menu__user-item">Избранное</a>
+                                <a class="menu__user-item">Мои заказы</a>
+                                <a class="menu__user-item">Выйти</a>
+                            </div>
+                        </div>
+        
+                        <button class="menu__cart">
+                            <a class="menu__cart-link" href="#">
+                                <span class="menu__cart-num">7</span>
+                                <div class="menu__cart-name">Корзина</div>
+                                <div class="menu__cart-money">7500р.</div>
+                            </a>
+                        </button>
+        
+                        <div class="window-cart window-cart--close">
+                            <button class="window-cart__close">
+                                <img class="window-cart__close-img" src="img/icons/close.svg" alt="close-img">
+                            </button>
+        
+                            <div class="window-cart__content">
+                                <div class="window-cart__content-info">
+                                    <a class="window-cart__img" href="#">
+                                        <img class="window-cart__img-mini" src="img/books/3.jpg" alt="mini-img">
+                                    </a>
+                                    <h4 class="window-cart__name">Пчеловодство в комиксах</h4>
+                                    <p class="window-cart__price">970р.</p>
+                                </div>
+        
+                                <div class="window-cart__total">
+                                    <p class="window-cart__title">Итого</p>
+                                    <p class="window-cart__cost">970р</p>
+                                </div>
+                                <button class="window-cart__btn">Перейти в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+        
+                <nav class="category">
+                    <div class="category__list">
+                        <div class="category__list-item">
+                            <button class="category__list-all category__list-link dropbtn">
+                                <span class="category__list-icon "></span>Все категории</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Художественная литература</a>
+                                <a class="category__list-point">Психология</a>
+                                <a class="category__list-point">Путешествия.Хобби.Досуг</a>
+                                <a class="category__list-point">Иностранная литература</a>
+                                <a class="category__list-point">Искусство</a>
+                                <a class="category__list-point">Биографии и мемуары</a>
+                                <a class="category__list-point">Философия</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Электронные книги</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Классика</a>
+                                <a class="category__list-point">Детективы</a>
+                                <a class="category__list-point">Публицистика</a>
+                                <a class="category__list-point">История</a>
+                                <a class="category__list-point">Искусство</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Аудиокниги</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Электронные аудиокниги</a>
+                                <a class="category__list-point">CD-диски</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Коллекционные издания</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">История</a>
+                                <a class="category__list-point">Искусство</a>
+                                <a class="category__list-point">Энциклопедии</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Журналы</button>
+                        </div>
+                    </div>
+                </nav>
+        
+            </div>
+        </header>
+
+
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Корзина</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="garbage">
+                <div class="container">
+                    <h2 class="garbage__title title">Корзина</h2>
+
+                    <div class="garbage__block">
+                        <div class="garbage__block-title">Корзина:</div>
+                        <button class="garbage__block-btn">Очистить корзину</button>
+                    </div>
+
+                    <div class="garbage__items">
+                        <div class="garbage__content">
+                            <img src="img/books/3.jpg" alt="" class="garbage__content-img">
+                            <h6 class="garbage__content-name">Пчеловодство в комиксах</h6>
+
+
+                            <div class="counter__block">
+                                <div class="counter">
+                                    <button class="counter__btn" data-direction="minus">-</button>
+                                    <input class="counter__value" type="text" value="1">
+                                    <button class="counter__btn" data-direction="plus">+</button>
+                                </div>
+
+                                <div class="garbage__content-price">
+                                    <div class="garbage__price">970 рублей</div>
+                                    <div class="garbage__count">970р * 1 шт.</div>
+                                </div>
+                            </div>
+
+                            <div class="garbage__content-info">
+                                <div class="popular__item-heart">
+                                    <span class="popular__item-text">В избранное</span>
+                                    <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                                </div>
+
+                                <div class="popular__item-delete">
+                                    <span class="popular__item-text">Удалить</span>
+                                    <span class="fa fa-trash-o popular__delete" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="garbage__content">
+                        <img src="img/books/1.jpg" alt="" class="garbage__content-img">
+                        <h6 class="garbage__content-name">Живи красиво. Интерьер мечты от идеи до воплощения</h6>
+                    
+                        <div class="counter__block">
+                            <div class="counter">
+                                <button class="counter__btn" data-direction="minus">-</button>
+                                <input class="counter__value" type="text" value="1">
+                                <button class="counter__btn" data-direction="plus">+</button>
+                            </div>
+                        
+                            <div class="garbage__content-price">
+                                <div class="garbage__price">1000 рублей</div>
+                                <div class="garbage__count">1000р * 1 шт.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="garbage__content-info">
+                            <div class="popular__item-heart">
+                                <span class="popular__item-text">В избранное</span>
+                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                            </div>
+                            <div class="popular__item-delete">
+                                <span class="popular__item-text">Удалить</span>
+                                <span class="fa fa-trash-o popular__delete" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="garbage__content">
+                        <img src="img/books/2.jpg" alt="" class="garbage__content-img">
+                        <h6 class="garbage__content-name">Унесенные ветром. Том 1</h6>
+                    
+                        <div class="counter__block">
+                            <div class="counter">
+                                <button class="counter__btn" data-direction="minus">-</button>
+                                <input class="counter__value" type="text" value="1">
+                                <button class="counter__btn" data-direction="plus">+</button>
+                            </div>
+                        
+                            <div class="garbage__content-price">
+                                <div class="garbage__price">749 рублей</div>
+                                <div class="garbage__count">749р * 1 шт.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="garbage__content-info">
+                            <div class="popular__item-heart">
+                                <span class="popular__item-text">В избранное</span>
+                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                            </div>
+                            <div class="popular__item-delete">
+                                <span class="popular__item-text">Удалить</span>
+                                <span class="fa fa-trash-o popular__delete" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="garbage__content">
+                        <img src="img/books/4.jpg" alt="" class="garbage__content-img">
+                        <h6 class="garbage__content-name">Спокойствие. Стоицизм – путь мудреца</h6>
+                    
+                        <div class="counter__block">
+                            <div class="counter">
+                                <button class="counter__btn" data-direction="minus">-</button>
+                                <input class="counter__value" type="text" value="1">
+                                <button class="counter__btn" data-direction="plus">+</button>
+                            </div>
+                        
+                            <div class="garbage__content-price">
+                                <div class="garbage__price">329 рублей</div>
+                                <div class="garbage__count">329р * 1 шт.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="garbage__content-info">
+                            <div class="popular__item-heart">
+                                <span class="popular__item-text">В избранное</span>
+                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                            </div>
+                            <div class="popular__item-delete">
+                                <span class="popular__item-text">Удалить</span>
+                                <span class="fa fa-trash-o popular__delete" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="garbage__total">
+                        <div class="garbage__total-info">
+                            <div class="garbage__total-info-text">
+                                <div class="garbage__total-quan">4 товара</div>
+                                <div class="garbage__total-tot">Итого 3048 рублей</div>
+                            </div>
+
+                            <div class="garbage__total-info-input">
+                                <input class="garbage__total-infoinp" type="text" value="Введите промокод">
+                                <button class="garbage__total-infobtn">Активировать</button>
+                            </div>
+                        </div>
+
+                        <button class="garbage__total-btn">Оформить заказ</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+
+                    <div class="footer__info">
+
+                        <a class="footer__logo-link" href="#">BookShop</a>
+
+                        <div class="footer__phone">
+                            <a class="footer__phone-link" href="tel:8xxxxxxxxxx">+7(xxx)xxx-xx-xx</a>
+                        </div>
+
+                        <div class="footer__social">
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/telegram.svg" alt="telegram-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/vk.svg" alt="vk-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/facebook.svg" alt="facebook-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/instagram.svg" alt="instagram-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/whatsapp.svg" alt="facebook-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/youtube.svg" alt="twitter-icon">
+                            </a>
+                        </div>
+                        <div class="footer__address"> 111222, г. Москва, проезд Улицаулица, дом x, корпус x</div>
+                    </div>
+
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Как оформить заказ
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Оплата
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Доставка
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Обмен и возврат товара
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Отзывы о нас
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Контакты
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">О компании
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Наши партнеры
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Вакансии
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Пользовательское соглашение
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="container">
+                    <p class="footer__copyright-text">© 2022. «BookShop»</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="js/main.min.js"></script>
+
+</body>
+</html>

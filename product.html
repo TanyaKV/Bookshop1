@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShop</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="container">
+        
+                <nav class="menu">
+                    <h3 class="menu__title">BookShop</h3>
+        
+                    <form class="menu__search">
+                        <input class="menu__search-input" type="text" placeholder="Поиск по названию, автору">
+                        <button class="menu__search-btn" type="submit">
+                            <img class="menu_search-icon" src="img/icons/search-icon.svg" alt="search-icon">
+                        </button>
+                    </form>
+                    <div class="menu__box">
+                        <div class="menu__info">
+                            <a class="menu__info-phone" href="tel:8xxxxxxxxxx">+7(xxx)xxx-xx-xx</a>     
+        
+                            <span class="menu__info-item">09:00-22:00 без выходных</span>
+                        </div>
+        
+        
+                        <div class="menu__location">
+                            <button class="menu__location-btn">
+                                <a class="menu__location-link" href="#">Москва</a>
+                            </button>
+        
+                            <div class="menu__location-content">
+                                <div class="menu__location-choice">
+                                    <input class="menu__location-input" type="text" spellcheck="false"
+                                        placeholder="Начните вводить">
+                                </div>
+        
+                                <ul class="menu__location-list options">
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <div class="menu__user">
+        
+                            <button class="menu__user-btn">
+                                <a class="menu__user-link" href="#">Войти</a>
+                            </button>
+        
+                            <div class="menu__user-list">
+                                <a class="menu__user-item">Личный кабинет</a>
+                                <a class="menu__user-item">Настройки</a>
+                                <a class="menu__user-item">Сообщения</a>
+                                <a class="menu__user-item">Избранное</a>
+                                <a class="menu__user-item">Мои заказы</a>
+                                <a class="menu__user-item">Выйти</a>
+                            </div>
+                        </div>
+
+                        <button class="menu__cart">
+                            <a class="menu__cart-link" href="#">
+                                <span class="menu__cart-num">7</span>
+                                <div class="menu__cart-name">Корзина</div>
+                                <div class="menu__cart-money">7500р.</div>
+                            </a>
+                        </button>
+        
+                        <div class="window-cart window-cart--close">
+                            <button class="window-cart__close">
+                                <img class="window-cart__close-img" src="img/icons/close.svg" alt="close-img">
+                            </button>
+        
+                            <div class="window-cart__content">
+                                <div class="window-cart__content-info">
+                                    <a class="window-cart__img" href="#">
+                                        <img class="window-cart__img-mini" src="img/books/3.jpg" alt="mini-img">
+                                    </a>
+                                    <h4 class="window-cart__name">Пчеловодство в комиксах</h4>
+                                    <p class="window-cart__price">970р.</p>
+                                </div>
+        
+                                <div class="window-cart__total">
+                                    <p class="window-cart__title">Итого</p>
+                                    <p class="window-cart__cost">970р</p>
+                                </div>
+                                <button class="window-cart__btn">Перейти в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+        
+                <nav class="category">
+                    <div class="category__list">
+                        <div class="category__list-item">
+                            <button class="category__list-all category__list-link dropbtn">
+                                <span class="category__list-icon "></span>Все категории</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Художественная литература</a>
+                                <a class="category__list-point">Психология</a>
+                                <a class="category__list-point">Путешествия.Хобби.Досуг</a>
+                                <a class="category__list-point">Иностранная литература</a>
+                                <a class="category__list-point">Искусство</a>
+                                <a class="category__list-point">Биографии и мемуары</a>
+                                <a class="category__list-point">Философия</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Электронные книги</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Классика</a>
+                                <a class="category__list-point">Детективы</a>
+                                <a class="category__list-point">Публицистика</a>
+                                <a class="category__list-point">История</a>
+                                <a class="category__list-point">Искусство</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Аудиокниги</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">Электронные аудиокниги</a>
+                                <a class="category__list-point">CD-диски</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Коллекционные издания</button>
+        
+                            <div class="category__list-menu">
+                                <a class="category__list-point">История</a>
+                                <a class="category__list-point">Искусство</a>
+                                <a class="category__list-point">Энциклопедии</a>
+                            </div>
+                        </div>
+        
+                        <div class="category__list-item">
+                            <button class="category__list-link">Журналы</button>
+                        </div>
+                    </div>
+                </nav>
+        
+            </div>
+        </header>
+
+
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Бестселлеры</a></li>
+                        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Пчеловодство в комиксах</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="product">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-slider">
+                            <div class="card-slider__nav slider-nav">
+                                <div class="slider-nav__item" tabindex="0"><img src="img/product/1.jpg" alt="img" class="slider-nav-img"></div>
+                                <div class="slider-nav__item" tabindex="0"><img src="img/product/2.jpg" alt="img" class="slider-nav-img"></div>
+                                <div class="slider-nav__item" tabindex="0"><img src="img/product/3.jpg" alt="img" class="slider-nav-img"></div>
+                                <div class="slider-nav__item" tabindex="0"><img src="img/product/4.jpg" alt="img" class="slider-nav-img"></div>
+                                <div class="slider-nav__item" tabindex="0"><img src="img/product/5.jpg" alt="img" class="slider-nav-img"></div>
+                            </div>
+
+                            <div class="card-slider__block slider-block">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img class="swiper-slide-img" src="img/product/1.jpg" alt="img"></div>
+                                    <div class="swiper-slide"><img class="swiper-slide-img" src="img/product/2.jpg" alt="img"></div>
+                                    <div class="swiper-slide"><img class="swiper-slide-img" src="img/product/3.jpg" alt="img"></div>
+                                    <div class="swiper-slide"><img class="swiper-slide-img" src="img/product/4.jpg" alt="img"></div>
+                                    <div class="swiper-slide"><img class="swiper-slide-img" src="img/product/5.jpg" alt="img"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-description">
+                            <div class="card-description__title">Пчеловодство в комиксах</div>
+                            <a class="card-description__author" href="#">Гюстен И.</a>
+                            <div class="card-description__mention">
+                                <div class="card-description__mention-stars">
+                                    <span class="fa fa-star stars"></span>
+                                    <span class="fa fa-star stars"></span>
+                                    <span class="fa fa-star stars"></span>
+                                    <span class="fa fa-star stars"></span>
+                                    <span class="fa fa-star star"></span>
+                                </div>
+
+                                <a class="card-description__mention-comments">3 отзыва</a>
+                                
+                            </div>
+
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">ID товара</div>
+                                <div class="card-description__items-value">2786188</div>
+                            </div>
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">Издательство</div>
+                                <div class="card-description__items-value">АртГид</div>
+                            </div>
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">Год издания</div>
+                                <div class="card-description__items-value">2020</div>
+                            </div>
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">ISBN</div>
+                                <div class="card-description__items-value">978-5-6041232-7-0</div>
+                            </div>
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">Переводчик</div>
+                                <div class="card-description__items-value">Дадаян Э.</div>
+                            </div>
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">Кол-во страниц</div>
+                                <div class="card-description__items-value">212</div>
+                            </div>
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">Формат</div>
+                                <div class="card-description__items-value">30 x 22 x 2</div>
+                            </div>
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">Тип обложки</div>
+                                <div class="card-description__items-value">Твердая бумажная</div>
+                            </div>
+                            <div class="card-description__items">
+                                <div class="card-description__items-name">Вес, г</div>
+                                <div class="card-description__items-value">830</div>
+                            </div>
+                        </div>
+
+                        <div class="card-info">
+                            <span class="card-info__available">В наличии: 13шт.</span>
+                            <span class="card-info__price">970р.</span>
+                            
+                            <button class="card-info__buybtn ">
+                                В корзину</button>
+
+                            <button class="card-info__heartbtn">В избранное
+                                <span class="fa fa-heart popular__heart" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="annotation">
+                        <h2 class="annotation__title">Аннотация</h2>
+                        <p class="annotation__text">Пчелы сопровождали меня всегда. Мой прадед, агроном Василий Леонов в селе Белая Колпь держал небольшую пасеку среди яблонь. Летом, лежа в шалаше в саду, я всегда слышал жужжание этих трудяг. Потом пчел подхватил зять деда Васи — мой
+                        папа Юрий Белое. До сих пор помню, как папа дождался вечера, чтобы все пчелы залетели в ульи, и, погрузив их в прицеп
+                        желтого «запорожца», повез вместе с нами домой. Так пчелы стали частью нашей жизни.</p>
+                        
+                        <p class="annotation__text-btn">Читать больше</p>
+                        <p class="annotation__text descElem">В детстве мы с братом Кириллом ловили пчел, роящихся вокруг соседских вишен и яблонь, а также помогали качать мед.
+                        Родители привозили костюмы пчеловодов и оборудование со всего света, а потом это начали делать мы. Свой мед меня всегда
+                        радовал как трофей, но куда больше удовольствия доставлял процесс его получения. Пчелы лечили укусами маму и бабушку, в
+                        бутылке водки развозился прополис, и получившуюся настойку пили как лекарство, когда болели. Больше всего мы любили есть
+                        мед в сотах, его можно было долго-долго жевать. И конечно, само присутствие пасеки возле дома создавало ощущение
+                        спокойствия и упорядоченности — такое могут дать только пчелы.</p>
+                        <p class="annotation__text descElem"> Эта книга-комикс, которая является настоящим произведением искусства, ответит в простой форме на множество вопросов о
+                        пчеловодстве, но главное — может стать началом вашего нового хобби. Хочу посвятить русское издание моему прадеду
+                        Василию Егоровичу Леонову и моим родителям Юрию и Ольге Беловым, которые продолжают традицию пчеловодства в нашей
+                        семье.</p>
+                    </div>
+
+                    <div class="mention__comments">
+                        <h4 class="mention__comments-title">Отзывы</h4>
+
+                        <form class="mention__form">
+                            <textarea class="mention__form-textarea" placeholder="Оставьте ваш отзыв о товаре"></textarea>
+                            <input class="mention__form-input" type="text" placeholder="Ваше имя">
+                            <button class="mention__form-btn" type="submit">Отправить отзыв</button>
+                        </form>
+
+                        <div class="mention__comments-items">
+                            <div class="mention__comments-item">
+                                <img class="mention__comments-avatar" src="img/avatar/1.png" alt="avatar">
+                                <div class="mention__comments-info">
+                                    <p class="mention__comments-name">Пользователь</p>
+                                    <p class="mention__comments-date">12 августа 2021</p>
+                                    <p class="mention__comments-text">Отличная книга, познавательна, пригодится в долгосрочной перспективе.
+                                        Иллюстрации супер!Отличная книга, познавательна, пригодится в долгосрочной перспективе. Иллюстрации
+                                        супер!Отличная книга, познавательна, пригодится в долгосрочной перспективе. Иллюстрации супер!</p>
+                                </div>
+                            </div>
+                            <div class="mention__comments-item">
+                                <img class="mention__comments-avatar" src="img/avatar/2.png" alt="avatar">
+                                <div class="mention__comments-info">
+                                    <p class="mention__comments-name">Пользователь</p>
+                                    <p class="mention__comments-date">12 августа 2021</p>
+                                    <p class="mention__comments-text">Отличная книга, познавательна, пригодится в долгосрочной перспективе.
+                                        Иллюстрации супер!</p>
+                                </div>
+                            </div>
+                            <div class="mention__comments-item">
+                                <img class="mention__comments-avatar" src="img/avatar/3.png" alt="avatar">
+                                <div class="mention__comments-info">
+                                    <p class="mention__comments-name">Пользователь</p>
+                                    <p class="mention__comments-date">12 августа 2021</p>
+                                    <p class="mention__comments-text">Отличная книга, познавательна, пригодится в долгосрочной перспективе.
+                                        Иллюстрации супер!Отличная книга, познавательна, пригодится в долгосрочной перспективе. Иллюстрации
+                                        супер!Отличная книга, познавательна,
+                                        пригодится в долгосрочной перспективе. Иллюстрации супер!Отличная книга, познавательна, пригодится в
+                                        долгосрочной
+                                        перспективе. Иллюстрации супер!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+
+                    <div class="footer__info">
+
+                        <a class="footer__logo-link" href="#">BookShop</a>
+
+                        <div class="footer__phone">
+                            <a class="footer__phone-link" href="tel:8xxxxxxxxxx">+7(xxx)xxx-xx-xx</a>
+                        </div>
+
+                        <div class="footer__social">
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/telegram.svg" alt="telegram-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/vk.svg" alt="vk-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/facebook.svg" alt="facebook-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/instagram.svg" alt="instagram-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/whatsapp.svg" alt="facebook-icon">
+                            </a>
+
+                            <a class="footer__social-link" href="#" target="_blank">
+                                <img class="footer__social-img" src="img/icons/youtube.svg" alt="twitter-icon">
+                            </a>
+                        </div>
+
+                        <div class="footer__address"> 111222, г. Москва, проезд Улицаулица, дом x, корпус x</div>
+
+                    </div>
+
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Как оформить заказ
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Оплата
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Доставка
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Обмен и возврат товара
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Отзывы о нас
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Контакты
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">О компании
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Наши партнеры
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Вакансии
+                            </a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="#">Пользовательское соглашение
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="container">
+                    <p class="footer__copyright-text">© 2022. «BookShop»</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>
